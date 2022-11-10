@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "568879664396",
+    "project_id": "mis-libros-d6a24",
+    "storage_bucket": "mis-libros-d6a24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568879664396:android:c0c5c3dbc84b33c2b5cd29",
+        "android_client_info": {
+          "package_name": "com.jhonw.mis_libros"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568879664396-2qnjgnok6mca8qpqep44j56hfnekgk7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxOAe2Q53evliPZa-Vq8iQgru84z_3-1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568879664396-2qnjgnok6mca8qpqep44j56hfnekgk7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
