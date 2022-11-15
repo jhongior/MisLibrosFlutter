@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage>
       } else {
         msg = "Bienvenido";
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => MyBooksPage()));
+            context, MaterialPageRoute(builder: (context) => HomePage()));
       }
       _showMsg(msg);
     }

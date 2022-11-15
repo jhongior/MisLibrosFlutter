@@ -19,30 +19,6 @@ class _MyBooksPageState extends State<MyBooksPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Mis Libros'),
-        actions: [
-          PopupMenuButton(
-            onSelected: (Menu item) {
-              setState(() {
-                if (item == Menu.logOut) {
-                  FirebaseAuth.instance.signOut();
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginPage()));
-                }
-              });
-            },
-            itemBuilder: (BuildContext context) => <PopupMenuEntry<Menu>>[
-              const PopupMenuItem(
-                child: Text('Cerrar Sesión'),
-                value: Menu.logOut,
-              )
-            ],
-          )
-        ],
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
         child: StreamBuilder<QuerySnapshot>(

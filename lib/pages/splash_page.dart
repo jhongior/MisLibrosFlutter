@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:mis_libros/pages/home_page.dart';
 import 'package:mis_libros/pages/login_page.dart';
 import 'package:mis_libros/pages/my_books_page.dart';
 
@@ -34,8 +35,8 @@ class _SplashPageState extends State<SplashPage>
         Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => const LoginPage()));
       else
-        Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const MyBooksPage()));
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => HomePage()));
     });
   }
 
