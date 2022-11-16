@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mis_libros/pages/FavoritesPage.dart';
+import 'package:mis_libros/pages/books_store_page.dart';
 import 'package:mis_libros/pages/login_page.dart';
 import 'package:mis_libros/pages/my_books_page.dart';
 import 'package:mis_libros/pages/search_book_page.dart';
@@ -28,6 +29,7 @@ class _HomePageState extends State<HomePage> {
     pages.add(MyBooksPage());
     pages.add(SearchBookPage());
     pages.add(FavoritesPage());
+    pages.add(BooksStorePage());
   }
 
   @override
@@ -62,6 +64,8 @@ class _HomePageState extends State<HomePage> {
         children: pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType
+            .fixed, //hace que se vea bien el navigator cuando son más de 3 items
         items: const [
           BottomNavigationBarItem(
               icon: Icon(
@@ -80,7 +84,13 @@ class _HomePageState extends State<HomePage> {
                 FontAwesomeIcons.heart,
                 size: 20,
               ),
-              label: 'Favoritos')
+              label: 'Favoritos'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                FontAwesomeIcons.store,
+                size: 20,
+              ),
+              label: 'Tiendas')
         ],
         currentIndex: currentPage,
         onTap: (page) {
