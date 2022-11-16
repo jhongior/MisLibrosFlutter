@@ -11,7 +11,7 @@ import 'package:mis_libros/pages/register_page.dart';
 import 'package:mis_libros/pages/search_book_page.dart';
 import 'package:mis_libros/pages/splash_page.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -19,6 +19,8 @@ void main() async {
 
   await Hive.initFlutter();
   Hive.registerAdapter(LocalBookAdapter());
+
+  await Hive.openBox<LocalBook>('favorites');
 
   runApp(const MyApp());
 }
